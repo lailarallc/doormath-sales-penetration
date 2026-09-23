@@ -101,3 +101,9 @@ yet deployed. Deploy first. Revenue framing blocked pending a decision.
   sweep is fully scoped with a validated detector at `tools/face_audit.py`, but
   execution belongs to `lailara-frame` first and is not Door Math work.
 - **Next review:** 2026-08-24 (unchanged)
+
+### 2026-09-23 — Audit (health check only)
+- **Findings:** 0 critical, 6 important, 5 nice-to-have
+- **Top concerns:** The gitleaks pre-commit hook never runs (`core.hooksPath=scripts/git-hooks` holds only pre-push), and the Fly deploy workflow ships every push to main with no test or lint gate — the full suite runs nowhere in CI and ruff has regressed to 25 errors in client-mode code. HANDOFF.md and PLAN.md stop at 2026-07-29, missing ~20 commits (client mode, CI gates, frame v1.5.0), and the 2026-08-24 review was missed.
+- **Action taken:** Audit only — no fixes this session
+- **Next review:** 2026-10-23
